@@ -13,17 +13,18 @@ $(function(){
 					$('#country-list').append('<li class="list-group-item"><strong>In French: </strong>' + list.frenchName +'</li>');
 					$('#country-list').append('<li class="list-group-item"><strong>Local Name: </strong>' + list.localName +'</li>');
 					$('#country-list').append('<li class="list-group-item"><strong>Region: </strong>' + list.region +'</li>')
-					$('#country-container').fadeIn(500);
+					$('#country-container').slideDown(500);
 				};
 			}
 		});
 	});
-	$('#search-button').click(function(){
-		$.ajax('/search', {
+	$('#search-button').click(function(){ 
+		$.ajax('/search',{type:'post', data:{term:'#search-bar'.val()},
 			success:function(data){
-				console.log('text');
-			}
-		});
+				console.log(data);
+				}
+			});
+		});		
 	});
 
 
@@ -39,6 +40,7 @@ $(function(){
 
 
 
+	
 
 
 
@@ -60,4 +62,15 @@ $(function(){
 
 
 
-});
+
+
+
+
+
+
+
+
+
+
+
+

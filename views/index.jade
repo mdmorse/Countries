@@ -1,12 +1,14 @@
 extends layout
 
 block content
+    header.header 
+      h1 Country Search
     .container
       .btn.btn-default#country-button Load Countries
       p
       .row 
         .col-sm-6
-            input.form-control(type="text", name="country", placeholder="Search For Country")
+            input.form-control#search-bar(action = "/search", method = "post", type="text", name="country", placeholder="Search For Country")
         .btn.btn-default#search-button Search
         .col-sm-6
                 p

@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
 }
 
 a {
@@ -11,4 +12,17 @@ ul > li:{
 }
 #country-container{
 	display: none;
+
+}
+.container{
+background-color: #E8E0DA;
+border-radius: 5px;
+padding-top: 10px;
+padding-bottom: 10px;
+border: black 1px solid;
+}
+.header{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
 }
