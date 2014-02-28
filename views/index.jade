@@ -1,10 +1,15 @@
 extends layout
 
 block content
-  .btn.btn-default#country-button Load Countries
-  p
-  .row 
-    .col-sm-6
-        input.form-control(type="text", name="country", placeholder="Search For Country")
-    .btn.btn-default Search
-           
+    .container
+      .btn.btn-default#country-button Load Countries
+      p
+      .row 
+        .col-sm-6
+            input.form-control(type="text", name="country", placeholder="Search For Country")
+        .btn.btn-default#search-button Search
+        .col-sm-6
+                p
+                #country-container
+                    #country-list
+               
