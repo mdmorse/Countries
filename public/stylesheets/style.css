@@ -15,11 +15,11 @@ ul > li:{
 
 }
 .container{
-background-color: #E8E0DA;
-border-radius: 5px;
-padding-top: 10px;
-padding-bottom: 10px;
-border: black 1px solid;
+	background-color: #E8E0DA;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: black 1px solid;
 }
 .header{
 	width: 100%;

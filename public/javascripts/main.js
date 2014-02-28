@@ -19,9 +19,14 @@ $(function(){
 		});
 	});
 	$('#search-button').click(function(){ 
-		$.ajax('/search',{type:'post', data:{term:'#search-bar'.val()},
+		$.ajax('/search',{type:'post', data:{term:$('#search-bar').val()},
 			success:function(data){
-				console.log(data);
+				// var list = data;
+				$('#country-list').append('<li class="list-group-item"><h2>' + data.name +'</h2></li>');
+				$('#country-list').append('<li class="list-group-item"><strong>In French: </strong>' + data.frenchName +'</li>');
+				$('#country-list').append('<li class="list-group-item"><strong>Local Name: </strong>' + data.localName +'</li>');
+				$('#country-list').append('<li class="list-group-item"><strong>Region: </strong>' + data.region +'</li>')
+				$('#country-container').slideDown(500);
 				}
 			});
 		});		
