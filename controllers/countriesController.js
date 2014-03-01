@@ -6,5 +6,5 @@ exports.index = function(req, res){
 };
 
 exports.find = function(req,res){
-	res.render('index');
+	res.send(countriesModel);
 };
