@@ -6,5 +6,9 @@ exports.index = function(req, res){
 };
 
 exports.find = function(req,res){
-	res.send(countriesModel);
+	var term = req.body.term
+	var filter = countriesModel.filter(function(term){
+		return term.name===req.body.term;
+	});
+	res.send(filter);
 };
