@@ -4,14 +4,14 @@ block content
     header.header 
       h1 Country Search
     .container
-      .btn.btn-info#country-button Load Countries
-      .btn.btn-warning#country-remove Remove List
+      button.btn.btn-info#country-button Load Countries
+      button.btn.btn-warning#country-remove Remove List
 
       p
       .row 
-        .col-sm-6
+        .col-sm-4
             input.form-control#search-bar(action = "/search", method = "post", type="text", name="country", placeholder="Search For Country")
-        .btn.btn-default#search-button Search
+        //- button.btn.btn-default#search-button Search
         .col-sm-6
                 p
                 #country-container

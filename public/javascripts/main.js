@@ -18,9 +18,10 @@ $(function(){
 			}
 		});
 	});
-	$('#search-button').click(function(){ 
+	$('#search-bar').keyup(function(){ 
 		$.ajax('/search',{type:'post', data:{term:$('#search-bar').val()},
 			success:function(data){
+				$('#country-list').empty();
 				for(i=0; i<data.length; i++){
 					var list = data[i];
 					$('#country-list').append('<li class="list-group-item"><h2>' + list.name +'</h2></li>');
@@ -33,7 +34,8 @@ $(function(){
 			});
 		});	
 		$('#country-remove').click(function(){
-			$('#country-container').slideUp();
+				$('#country-list').empty();
+				$('#country-container').slideUp();
 		});	
 
 
